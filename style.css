@@ -1,0 +1,108 @@
+/* 
+
+.content {
+    overflow: hidden;
+    margin: 0;
+    text-align: left;
+    padding: 10px;
+}
+
+.content:before {
+    content: "";
+    position: absolute;
+    width : 20rem;
+    height: auto;
+    min-height: 120px;
+    background: inherit;
+    z-index: -1;
+    
+    background: rgb(11,17,65);
+    background: -moz-linear-gradient(267deg, rgba(11,17,65,1) 0%, rgba(0,90,207,1) 23%, rgba(171,19,128,1) 50%, rgba(0,90,207,1) 82%, rgba(11,17,65,1) 100%);
+    background: -webkit-linear-gradient(267deg, rgba(11,17,65,1) 0%, rgba(0,90,207,1) 23%, rgba(171,19,128,1) 50%, rgba(0,90,207,1) 82%, rgba(11,17,65,1) 100%);
+    background: linear-gradient(267deg, rgba(11,17,65,1) 0%, rgba(0,90,207,1) 23%, rgba(171,19,128,1) 50%, rgba(0,90,207,1) 82%, rgba(11,17,65,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b1141",endColorstr="#0b1141",GradientType=1);
+    filter: blur(var(--value, 0.2rem));
+}
+
+
+ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    height: auto;
+}
+
+.main-container {
+    padding: 10px;
+    background: linear-gradient(267deg, rgba(11,17,65,1) 0%, rgba(0,90,207,1) 100%);
+    border-radius: 15px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.182);
+}
+
+.main-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(267deg, rgba(11,17,65,1) 0%, rgba(0,90,207,1));
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+}
+
+.name {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.description {
+    color: #fff;
+    text-align: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-right: 30px;
+    margin: 0;
+}
+
+.tl-link {
+    display: inline-block;
+    color: #3DAE2B;
+    font-weight: bold;
+}
+
+.links {
+    padding: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    color: #3DAE2B;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tl-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
