@@ -38,6 +38,7 @@ body {
     background: linear-gradient(267deg, rgba(11,17,65,1) 0%, rgba(0,90,207,1) 100%);
     border-radius: 15px;
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.182);
+    max-width: 360px;
 }
 
 .main-container::before {
